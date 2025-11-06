@@ -2,38 +2,43 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chương Trình Khuyến Mại - NLS</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Chương Trình Khuyến Mại - NLS</h1>
+    <h1>🎉 Chương Trình Khuyến Mại - NLS</h1>
 
-    <form>
+    <form id="promoForm">
       <div class="section">
-        <label><strong>Rượu/Bia ≥ 15 độ?</strong></label><br>
-        <label><input type="radio" name="alcohol" value="yes"> Có</label>
-        <label><input type="radio" name="alcohol" value="no" checked> Không</label>
+        <p><strong>Rượu/Bia ≥ 15 độ?</strong></p>
+        <label><input type="radio" name="alcohol" value="Có"> Có</label>
+        <label><input type="radio" name="alcohol" value="Không" checked> Không</label>
       </div>
 
       <div class="section">
-        <label><strong>Chọn loại hình khuyến mại:</strong></label><br>
+        <p><strong>Chọn loại hình khuyến mại:</strong></p>
         <div class="checkbox-group">
-          <label><input type="checkbox" name="promo" value="sample"> Hàng mẫu</label>
-          <label><input type="checkbox" name="promo" value="gift"> Tặng hàng hóa/dịch vụ</label>
-          <label><input type="checkbox" name="promo" value="discount"> Giảm giá</label>
-          <label><input type="checkbox" name="promo" value="voucher"> Tặng phiếu mua hàng</label>
-          <label><input type="checkbox" name="promo" value="contest"> Trao thưởng thi</label>
-          <label><input type="checkbox" name="promo" value="luckydraw"> Chương trình may rủi</label>
-          <label><input type="checkbox" name="promo" value="loyal"> Khách hàng thường xuyên</label>
-          <label><input type="checkbox" name="promo" value="other"> Khuyến mại khác</label>
-          <label><input type="checkbox" name="promo" value="artist"> Nghệ sĩ biểu diễn</label>
-          <label><input type="checkbox" name="promo" value="coupon"> Bán coupon</label>
+          <label><input type="checkbox" value="Hàng mẫu"> Hàng mẫu</label>
+          <label><input type="checkbox" value="Tặng hàng hóa/dịch vụ"> Tặng hàng hóa/dịch vụ</label>
+          <label><input type="checkbox" value="Giảm giá"> Giảm giá</label>
+          <label><input type="checkbox" value="Tặng phiếu mua hàng"> Tặng phiếu mua hàng</label>
+          <label><input type="checkbox" value="Trao thưởng thi"> Trao thưởng thi</label>
+          <label><input type="checkbox" value="Chương trình may rủi"> Chương trình may rủi</label>
+          <label><input type="checkbox" value="Khách hàng thường xuyên"> Khách hàng thường xuyên</label>
+          <label><input type="checkbox" value="Khuyến mại khác"> Khuyến mại khác</label>
+          <label><input type="checkbox" value="Nghệ sĩ biểu diễn"> Nghệ sĩ biểu diễn</label>
+          <label><input type="checkbox" value="Bán coupon"> Bán coupon</label>
         </div>
       </div>
 
-      <button type="submit" class="submit-btn">Check Kết Quả</button>
+      <button type="button" class="submit-btn" onclick="checkResult()">✅ Check Kết Quả</button>
     </form>
+
+    <div id="result" class="result-box"></div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
